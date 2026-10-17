@@ -1,0 +1,29 @@
+/* Header and footer. */
+.site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(22, 18, 14, 0.82); backdrop-filter: blur(12px); transition: box-shadow 0.3s; }
+/* Reading progress bar pinned to the header's bottom edge. Scaled with
+   transform (not width) so updates never trigger layout. */
+.scroll-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--accent); transform: scaleX(var(--progress, 0)); transform-origin: left; opacity: 0.45; filter: brightness(0.7); box-shadow: 0 0 0 transparent; transition: opacity 0.8s ease, filter 0.8s ease, box-shadow 0.8s ease; will-change: transform; }
+/* "Active" while the user is scrolling: brighter and glowing; it dims again
+   shortly after they stop. Only opacity/filter/shadow change, never layout. */
+.scroll-progress.active { opacity: 1; filter: brightness(1.25); box-shadow: 0 0 12px var(--accent), 0 0 24px rgba(232, 160, 74, 0.5); transition-duration: 0.15s; }
+
+.site-header.scrolled { box-shadow: 0 8px 24px -16px #000; }
+.nav { max-width: var(--max); margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+.brand:hover { color: var(--text); }
+.brand-mark { width: 28px; height: 28px; border-radius: 6px; border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; transition: transform 0.4s var(--ease); }
+.brand:hover .brand-mark { transform: rotate(90deg); }
+.brand-mark::after { content: ""; width: 10px; height: 2px; background: var(--accent); }
+.brand-name { font: 700 20px var(--font-display); letter-spacing: -0.01em; color: var(--accent); filter: brightness(0.85); text-shadow: 0 0 0 transparent; transition: filter 0.8s ease, text-shadow 0.8s ease; }
+/* Same scroll-activity cue as the progress bar: lit while scrolling, calmer when idle. */
+.site-header.active .brand-name { filter: brightness(1.2); text-shadow: 0 0 14px rgba(232, 160, 74, 0.65); transition-duration: 0.15s; }
+.nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font: 14px var(--font-mono); }
+.nav-links a { color: var(--text-soft); text-decoration: none; padding: 10px 0; position: relative; }
+.nav-links a:not(.nav-cta)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.3s var(--ease); }
+.nav-links a:not(.nav-cta):hover { color: var(--text); }
+.nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
+.nav-cta { color: var(--bg) !important; background: var(--accent); padding: 10px 18px !important; border-radius: 999px; font-weight: 500; transition: transform 0.25s var(--ease), background 0.2s; }
+.nav-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+.site-footer { border-top: 1px solid var(--line); }
+.footer-row { max-width: var(--max); margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }

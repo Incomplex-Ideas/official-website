@@ -1,0 +1,6 @@
+.values { display: flex; flex-direction: column; gap: 48px; }
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.value-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transition: transform 0.35s var(--ease), border-color 0.25s, box-shadow 0.35s; }
+.value-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 18px 40px -24px var(--accent); }
+.value-card h3 { font-size: 26px; font-weight: 700; }
+.value-card p { color: var(--text-soft); }

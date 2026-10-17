@@ -1,0 +1,18 @@
+/* Design tokens taken from _localdesign/Main.dc.html. Change values here only. */
+:root {
+  --bg: #16120e;
+  --bg-alt: #1d1813;
+  --card: #211b15;
+  --line: #2e261e;
+  --line-strong: #4a3e31;
+  --text: #efe6d8;
+  --text-soft: #cfc3b2;
+  --text-mute: #a89a87;
+  --accent: #e8a04a;
+  --accent-hover: #f4c185;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --max: 1200px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}

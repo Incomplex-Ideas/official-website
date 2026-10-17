@@ -1,0 +1,5 @@
+.philosophy { display: flex; flex-wrap: wrap; gap: 48px; }
+.philosophy-label { flex: 1 1 260px; }
+.philosophy-body { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.philosophy h2 { font-weight: 500; font-size: clamp(30px, 4vw, 48px); line-height: 1.15; letter-spacing: -0.02em; }
+.philosophy p { max-width: 640px; color: var(--text-soft); }
